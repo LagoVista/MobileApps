@@ -1,6 +1,8 @@
 ﻿using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using System.Net;
+using System.Net.Sockets;
 
 namespace LagoaVista.DeviceSimulator.Droid
 {
@@ -12,6 +14,8 @@ namespace LagoaVista.DeviceSimulator.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
+            TcpClient _client;
+ 
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
